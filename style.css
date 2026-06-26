@@ -13,61 +13,108 @@ main {
   height: 100%;
   width: 100%;
   background-color: black;
-  display: flex;
-  padding: 10px;
-  gap: 10px;
   color: white;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-rows: 3fr 2fr;
+  grid-gap: 10px;
+  padding: 10px;
+  overflow: hidden;
+  grid-template-areas: "left topRight topRight topRight" "left center centerRight rightLast";
 }
-main section {
-  height: 100%;
-  flex-grow: 1;
-  background-color: red;
+main .left {
+  grid-area: left;
+  background-image: url(https://images.unsplash.com/photo-1560718239-9fc177461a4b?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
   border-radius: 10px;
+  background-color: white;
+  background-size: cover;
+  background-position: center;
   position: relative;
   overflow: hidden;
 }
-main section .bottom {
-  height: 40%;
-  width: 100%;
-  background: linear-gradient(transparent, black);
-  bottom: -40%;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-}
-main section:nth-child(1) {
-  background-image: url(https://i.pinimg.com/1200x/0c/6f/e8/0c6fe80e89b3810f669c88940ad9e5a1.jpg);
-  background-size: cover;
-  background-position: center;
-}
-main section:nth-child(2) {
-  background-image: url(https://i.pinimg.com/736x/6c/15/83/6c1583ecc6b9ff42bcf92f20853c9d42.jpg);
-  background-size: cover;
-  background-position: center;
-}
-main section:nth-child(3) {
-  background-image: url(https://i.pinimg.com/736x/c8/5a/4c/c85a4ce3dc3a3638ee61dd6107730399.jpg);
-  background-size: cover;
-  background-position: center;
-}
-main section:nth-child(4) {
-  background-image: url(https://i.pinimg.com/736x/a2/fb/f2/a2fbf2127c2a387e876cb1f347a5c3d7.jpg);
-  background-size: cover;
-  background-position: center;
-}
-main section:nth-child(5) {
-  background-image: url(https://i.pinimg.com/736x/13/04/1c/13041cc77b2b43fec50559f17316eaa5.jpg);
-  background-size: cover;
-  background-position: center;
-}
-main section:hover {
-  flex-grow: 2.5;
+main .left:hover {
   transition: all ease 1s;
   cursor: pointer;
 }
-main section:hover .bottom {
+main .left:hover .bottom {
   top: 60%;
-  font-size: larger;
+}
+main .topRight {
+  grid-area: topRight;
+  background-image: url(https://images.unsplash.com/photo-1775990694704-5005356b3e07?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  border-radius: 10px;
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+main .topRight:hover {
+  transition: all ease 1s;
+  cursor: pointer;
+}
+main .topRight:hover .bottom {
+  top: 60%;
+}
+main .center {
+  grid-area: center;
+  background-image: url(https://images.unsplash.com/photo-1624978478827-59c58ef74e6e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  border-radius: 10px;
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+main .center:hover {
+  transition: all ease 1s;
+  cursor: pointer;
+}
+main .center:hover .bottom {
+  top: 60%;
+}
+main .centerRight {
+  grid-area: centerRight;
+  background-image: url(https://images.unsplash.com/photo-1595184979141-090792f6b578?q=80&w=705&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  border-radius: 10px;
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+main .centerRight:hover {
+  transition: all ease 1s;
+  cursor: pointer;
+}
+main .centerRight:hover .bottom {
+  top: 60%;
+}
+main .rightLast {
+  grid-area: rightLast;
+  background-image: url(https://images.unsplash.com/photo-1686238349945-82074ce9f02f?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  border-radius: 10px;
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+main .rightLast:hover {
+  transition: all ease 1s;
+  cursor: pointer;
+}
+main .rightLast:hover .bottom {
+  top: 60%;
+}
+main .bottom {
+  height: 40%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(transparent, rgb(49, 48, 48));
+  position: absolute;
+  bottom: -40%;
+  padding: 10px;
 }/*# sourceMappingURL=style.css.map */
