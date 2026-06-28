@@ -17,6 +17,11 @@ html,body{
   gap:$gap;
 }
 
+@mixin flex-center(){
+  display: flex;
+  align-items: center;
+}
+
 section{
   max-width: 2000px;
 }
@@ -40,7 +45,8 @@ main{
     font-family: Verdana, sans-serif;
   }
 
-  section{
+  .view1{
+    
     width:100%;
     @include flex-column(1rem);
 
@@ -73,6 +79,7 @@ main{
         }
 
         p{
+          
           line-height: 1.5;
           font-size: 1.4rem;
           color: rgb(146, 142, 142);
@@ -90,13 +97,215 @@ main{
       }
     }
   }
+
+
+  .view2{
+    width: 100%;
+    padding: 1rem;
+    @include flex-column(1.5rem);
+
+    .top{
+      @include flex-center();
+      justify-content: space-around;
+
+      
+    }
+
+    .bottom{
+      @include flex-center();
+      justify-content: space-around;
+
+      
+    }
+
+    .element{
+        font-size: 1.5rem;
+
+          small{
+            opacity: 0.7;
+          }
+
+          h1{
+            font-weight: 100;
+            
+          }
+      }
+
+  }
+
+  .view3{
+    width: 100%;
+    @include flex-column(1rem);
+
+    .top{
+      width:100%;
+
+      img{
+        width:100%;
+        border-radius:1rem;
+      }
+    }
+
+    .bottom{
+      width:100%;
+      background-color: rgb(43, 41, 41);
+      color:rgb(232, 228, 228);
+      border-radius:1rem;
+      padding:1rem;
+      @include flex-column(3rem);
+
+      &>p{
+        text-transform: uppercase;
+      }
+     
+      .text{
+        @include flex-column(1rem);
+
+        h1{
+          text-transform: uppercase;
+          font-weight: 100;
+          font-size: 2.4rem;
+          color:rgb(215, 220, 224);
+        }
+
+        p{
+          line-height: 1.5;
+          font-size: 1.4rem;
+          color: rgb(146, 142, 142);
+        }
+
+      }
+    }
+  }
+
+  .view4{
+    width: 100%;
+    @include flex-column(1rem);
+
+    .top{
+      width:100%;
+
+      img{
+        width: 100%;
+        border-radius: 1rem;
+      }
+    }
+
+    .bottom{
+      width:100%;
+      background-color: rgb(43, 41, 41);
+      color:rgb(232, 228, 228);
+      border-radius:1rem;
+      padding:1rem;
+      @include flex-column(3rem);
+
+      &>p{
+        text-transform: uppercase;
+      }
+     
+      .text{
+        @include flex-column(1rem);
+
+        h1{
+          text-transform: uppercase;
+          font-weight: 100;
+          font-size: 2.4rem;
+          color:rgb(215, 220, 224);
+        }
+
+        p{
+          
+          line-height: 1.5;
+          font-size: 1.4rem;
+          color: rgb(146, 142, 142);
+        }
+
+      }
+    }
+
+    
+  }
+
+  .view5{
+    @include flex-column(2rem);
+    width:100%;
+    padding:0.5rem;
+
+
+    .card{
+      width:100%;
+      background-image:
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url("./view5.webp");
+      background-size: cover;
+      border-radius: 1rem;
+      aspect-ratio: 1/1;
+      @include flex-column(1rem);
+      justify-content: space-between;
+      padding:1rem;
+    }
+
+    .card2{
+      width:100%;
+      background-image:
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url("./view5b.webp");
+      background-size: cover;
+      border-radius: 1rem;
+      aspect-ratio: 1/1;
+      @include flex-column(1rem);
+      justify-content: space-between;
+      padding:1rem;
+
+    }
+
+    .card3{
+      width:100%;
+      background-image:
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url("./view5c.webp");
+      background-size: cover;
+      border-radius: 1rem;
+      aspect-ratio: 1/1;
+      @include flex-column(1rem);
+      justify-content: space-between;
+      padding:1rem;
+    }
+
+    .icon,.bottom{
+      background-color: rgba(31, 30, 30, 0.279);
+      backdrop-filter: blur(5px);
+      border: 2px solid white;
+      border-radius: 0.5rem;
+      padding:0.5rem;
+    }
+
+    .icon{
+      width:fit-content;
+      border-radius:40%;
+    }
+
+    .bottom{
+      text-transform: uppercase;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .top{
+      display: flex;
+      gap:0.5rem;
+      justify-content:flex-end;
+    }
+  }
 }
+
+
 
 @media (min-width:900px){
   main{
    
 
-    section{
+    .view1{
       flex-direction: row;
 
       .top{
@@ -115,6 +324,55 @@ main{
           }
         }
       }
+    }
+
+    .view3{
+      flex-direction: row-reverse;
+
+      .top{
+        width:50%;
+      }
+
+      .bottom{
+        width: 50%;
+        padding:2rem;
+        justify-content: space-between;
+
+        .text{
+
+          h1{
+            font-size:3rem;
+          }
+
+          .paragraph{
+            display: flex;
+            gap:1rem;
+          }
+        }
+      }
+    }
+
+    .view4{
+      flex-direction: row;
+      
+      .top{
+        width:50%;
+      }
+
+      .bottom{
+        width:50%;
+        padding:2rem;
+        justify-content: space-between;
+
+        h1{
+          font-size:3rem;
+        }
+      }
+    }
+
+    .view5{
+      flex-direction: row;
+
     }
 
     
