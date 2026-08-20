@@ -1,16 +1,12 @@
-let counter = document.querySelector('#Counter');
-let increase = document.querySelector('#Increase');
-let decrease = document.querySelector('#Decrease');
+let bulb = document.querySelector('.bulb');
+let onbutton = document.querySelector('#on');
+let offbutton = document.querySelector('#off');
 
-let count = 0;
 
-increase.addEventListener('click',function(){
-  count++;
-  counter.innerHTML = count;
+onbutton.addEventListener('click',function(){
+  bulb.style.backgroundColor = 'Gold';
 });
 
-decrease.addEventListener('click',function(){
-  count--;
-  counter.innerHTML = count;
+offbutton.addEventListener('click',function(){
+  bulb.style.backgroundColor = 'white';
 });
-
