@@ -11,17 +11,19 @@ html, body {
 }
 
 #Counter {
-  font-size: 125px;
+  font-size: 150px;
 }
 
 #Increase {
-  padding: 20px;
   margin: 10px;
+  padding: 25px;
   background-color: green;
+  color: white;
 }
 
 #Decrease {
-  padding: 20px;
   margin: 10px;
+  padding: 25px;
   background-color: red;
+  color: white;
 }/*# sourceMappingURL=style.css.map */
