@@ -1,4 +1,15 @@
-console.log("Hello Developer");
-alert("Welcome");
-let name = prompt("Enter your name : ");
-console.log("Hello, My name is "+name+".");
+let counter = document.querySelector('#Counter');
+let increase = document.querySelector('#Increase');
+let decrease = document.querySelector('#Decrease');
+
+let count = 0;
+increase.addEventListener('click',function(){
+  count++;
+  counter.innerHTML = count;
+})
+
+
+decrease.addEventListener('click',function(){
+  count--;
+  counter.innerHTML = count;
+})

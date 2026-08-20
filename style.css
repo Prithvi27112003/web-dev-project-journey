@@ -1,1 +1,27 @@
-/*# sourceMappingURL=style.css.map */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+#Counter {
+  font-size: 125px;
+}
+
+#Increase {
+  padding: 20px;
+  margin: 10px;
+  background-color: green;
+}
+
+#Decrease {
+  padding: 20px;
+  margin: 10px;
+  background-color: red;
+}/*# sourceMappingURL=style.css.map */
