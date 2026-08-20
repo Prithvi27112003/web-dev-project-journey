@@ -25,14 +25,7 @@ h1{
 
 }
 
-#on{
+button{
   margin:20px;
   padding:10px;
-  background-color:green;
-}
-
-#off{
-  margin:20px;
-  padding: 10px;
-  background-color:red;
 }
