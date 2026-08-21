@@ -1,21 +1,12 @@
-let score = document.querySelector('h1');
-let incButton = document.querySelector('#increase');
-let decButton = document.querySelector('#decrease');
-let resetButton = document.querySelector('#reset');
+let box = document.querySelector('#box');
+let button = document.querySelector('button');
 
-let count = 0;
 
-incButton.addEventListener('click',function(){
-  count++;
-  score.innerHTML = count;
-});
 
-decButton.addEventListener('click',function(){
-  count--;
-  score.innerHTML = count;
-});
+button.addEventListener('click',function(){
+  let red = Math.floor(Math.random()*100);
+  let green = Math.floor(Math.random()*100);
+  let blue = Math.floor(Math.random()*100);
 
-resetButton.addEventListener('click',function(){
-  count = 0;
-  score.innerHTML = count;
+  box.style.backgroundColor = `rgb(${red},${green},${blue})`;
 })

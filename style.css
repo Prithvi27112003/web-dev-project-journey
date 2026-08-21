@@ -7,30 +7,36 @@
 html,body{
   height: 100%;
   width: 100%;
-  text-align: center;
-}
-h1{
-  font-size: 100px;
-  margin-bottom: 50px;
-}
-#increase{
-  padding: 20px;
-  background-color: green;
-  margin: 20px;
-  color: white;
-}
-
-#decrease{
-  padding:20px;
-  background-color: red;
-  margin: 20px;
-  color: white;
-}
-
-#reset{
-  padding:20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   background-color: black;
-  color: white;
-  margin: 20px;
 }
 
+h1{
+  font-size: 50px;
+  color: white;
+
+}
+
+#box{
+  height: 250px;
+  width: 250px;
+  margin: 50px;
+  background-color: white;
+  border: 5px solid white;
+  border-radius: 10px;
+}
+
+button{
+  padding:20px 10px;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+}
+
+button:active{
+  background-color: green;
+  scale: 0.90;
+}
