@@ -1,16 +1,21 @@
-let bulb = document.querySelector('.bulb');
-let button = document.querySelector('button');
+let score = document.querySelector('h1');
+let incButton = document.querySelector('#increase');
+let decButton = document.querySelector('#decrease');
+let resetButton = document.querySelector('#reset');
 
-let flag = 0;
+let count = 0;
 
-button.addEventListener('click',function(){
-  if(flag === 0){
-    bulb.style.backgroundColor = 'Gold';
-    flag = 1;
-  }else{
-    bulb.style.backgroundColor = 'white';
-    flag = 0;
-  }
-  
+incButton.addEventListener('click',function(){
+  count++;
+  score.innerHTML = count;
 });
 
+decButton.addEventListener('click',function(){
+  count--;
+  score.innerHTML = count;
+});
+
+resetButton.addEventListener('click',function(){
+  count = 0;
+  score.innerHTML = count;
+})
