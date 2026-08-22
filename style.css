@@ -7,26 +7,30 @@
 html,body{
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 main{
   height: 100%;
   width: 100%;
   background-color: black;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: center;
+  white-space: nowrap;
 }
 
 button{
   padding: 10px 20px;
+  background-color: red;
   border-radius: 10px;
   position: relative;
   z-index: 9;
-
 }
 
 button:active{
+  background-color: green;
   scale: 0.90;
 }

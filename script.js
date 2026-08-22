@@ -1,22 +1,29 @@
 let main = document.querySelector('main');
 let button = document.querySelector('button');
 
-button.addEventListener('click', function(){
-  let div = document.createElement('div');
+button.addEventListener('click',function(){
+  let line = ['Never give up','Keep moving forward','Live your dreams','You got this','Dream big','Be a giver','Count your blessings','Appreciate every moment','Turn your wounds into wisdom.'];
+
+  let choose = line[Math.floor(Math.random()*9)];
+  let p = document.createElement('p');
+  p.innerHTML = choose;
+  console.log(p);
+  main.appendChild(p);
   let x = Math.random()*100;
   let y = Math.random()*100;
-  let r = Math.random()*360;
+  let r = Math.random()*180;
+  let s = Math.random()*3;
   let c1 = Math.floor(Math.random()*256);
   let c2 = Math.floor(Math.random()*256);
   let c3 = Math.floor(Math.random()*256);
 
-  div.style.height = '100px';
-  div.style.width = '100px';
-  div.style.backgroundColor = 'blue';
-  div.style.position = 'absolute';
-  main.appendChild(div);
-  div.style.left = `${x}%`;
-  div.style.top = `${y}%`;
-  div.style.backgroundColor = `rgb(${c1},${c2},${c3})`;
-  div.style.rotate = `${r}deg`;
+
+
+  p.style.position = 'absolute';
+  p.style.left = x+'%';
+  p.style.top = y+'%';
+  p.style.rotate = r+'deg';
+  p.style.scale = s;
+  p.style.color = `rgb(${c1},${c2},${c3})`;
+
 })
