@@ -1,66 +1,65 @@
+let button = document.querySelector('button');
 let box = document.querySelector('main');
 let boxText = document.querySelector('main h1');
-let button = document.querySelector('button');
+let bigBox = document.querySelector('#bigBox');
 
 let arr = [
   {
-    'team' : 'CSK',
+    'Team' :'CSK',
     'Primary' : 'Yellow',
     'Secondary' : 'Blue'
   },
   {
-    'team' : 'MI',
+    'Team' : 'MI',
     'Primary' : 'Blue',
-    'Secondary' : 'Gold'
-  },
+    'Secondary': 'Gold'
+  }, 
   {
-    'team' : 'KKR',
-    'Primary' : 'Purple',
-    'Secondary' : 'Gold'
-  }
-  ,{
-    'team' : 'RCB',
+    'Team' : 'RCB',
     'Primary' : 'Red',
-    'Secondary' : 'black'
+    'Secondary':'Black'
+  },
+   {
+    'Team' : 'KKR',
+    'Primary' : 'Purple',
+    'Secondary': 'Gold'
   },
   {
-    'team' : 'SRH',
+    'Team' : 'RR',
+    'Primary': 'Pink',
+    'Secondary': 'Blue'
+  }, 
+  {
+    'Team' : 'GT',
+    'Primary' : 'Black',
+    'Secondary' : 'Gold'
+  },
+  {
+    'Team' : 'SRH',
     'Primary' : 'Orange',
-    'Secondary' : 'black'
-  },
+    'Secondary' : 'Black'
+  }, 
   {
-    'team' : 'PBSK',
+    'Team': 'DD',
     'Primary' : 'Red',
     'Secondary' : 'Blue'
-  },
+  }, 
   {
-    'team' : 'RR',
-    'Primary' : 'Pink',
-    'Secondary': 'Blue'
-  },
+    'Team' : 'LSG',
+    'Primary': 'aqua',
+    'Secondary' : 'sliver'
+  }, 
   {
-    'team' : 'DD',
-    'Primary': 'Blue',
-    'Secondary': 'Red'
-  },
-  {
-    'team' : 'LSG',
-    'Primary':'Aqua',
-    'Secondary':'orange'
-  },
-  {
-    'team' : 'GT',
-    'Primary':'Black',
-    'Secondary':'Gold'
+    'Team' : 'PBSK',
+    'Primary' : 'Red',
+    'Secondary': 'Gold'
   }
 ];
 
-button.addEventListener('click',function(){
+button.addEventListener('click', function(){
   let guess = arr[Math.floor(Math.random()*10)];
 
-  boxText.innerHTML = `${guess.team}`;
-  boxText.style.color = `${guess.Secondary}`;
-  box.style.backgroundColor = `${guess.Primary}`;
-  console.log(guess);
-
-})
+  boxText.innerHTML = `${guess.Team}`;
+  box.style.backgroundColor = `${guess.Secondary}`;
+  bigBox.style.backgroundColor= `${guess.Primary}`;
+});
