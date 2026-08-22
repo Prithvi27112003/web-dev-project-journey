@@ -1,65 +1,22 @@
+let main = document.querySelector('main');
 let button = document.querySelector('button');
-let box = document.querySelector('main');
-let boxText = document.querySelector('main h1');
-let bigBox = document.querySelector('#bigBox');
-
-let arr = [
-  {
-    'Team' :'CSK',
-    'Primary' : 'Yellow',
-    'Secondary' : 'Blue'
-  },
-  {
-    'Team' : 'MI',
-    'Primary' : 'Blue',
-    'Secondary': 'Gold'
-  }, 
-  {
-    'Team' : 'RCB',
-    'Primary' : 'Red',
-    'Secondary':'Black'
-  },
-   {
-    'Team' : 'KKR',
-    'Primary' : 'Purple',
-    'Secondary': 'Gold'
-  },
-  {
-    'Team' : 'RR',
-    'Primary': 'Pink',
-    'Secondary': 'Blue'
-  }, 
-  {
-    'Team' : 'GT',
-    'Primary' : 'Black',
-    'Secondary' : 'Gold'
-  },
-  {
-    'Team' : 'SRH',
-    'Primary' : 'Orange',
-    'Secondary' : 'Black'
-  }, 
-  {
-    'Team': 'DD',
-    'Primary' : 'Red',
-    'Secondary' : 'Blue'
-  }, 
-  {
-    'Team' : 'LSG',
-    'Primary': 'aqua',
-    'Secondary' : 'sliver'
-  }, 
-  {
-    'Team' : 'PBSK',
-    'Primary' : 'Red',
-    'Secondary': 'Gold'
-  }
-];
 
 button.addEventListener('click', function(){
-  let guess = arr[Math.floor(Math.random()*10)];
+  let div = document.createElement('div');
+  let x = Math.random()*100;
+  let y = Math.random()*100;
+  let r = Math.random()*360;
+  let c1 = Math.floor(Math.random()*256);
+  let c2 = Math.floor(Math.random()*256);
+  let c3 = Math.floor(Math.random()*256);
 
-  boxText.innerHTML = `${guess.Team}`;
-  box.style.backgroundColor = `${guess.Secondary}`;
-  bigBox.style.backgroundColor= `${guess.Primary}`;
-});
+  div.style.height = '100px';
+  div.style.width = '100px';
+  div.style.backgroundColor = 'blue';
+  div.style.position = 'absolute';
+  main.appendChild(div);
+  div.style.left = `${x}%`;
+  div.style.top = `${y}%`;
+  div.style.backgroundColor = `rgb(${c1},${c2},${c3})`;
+  div.style.rotate = `${r}deg`;
+})
