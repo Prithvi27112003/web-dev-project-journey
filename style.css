@@ -1,36 +1,31 @@
 *{
-  margin: 0;
-  padding: 0;
+  margin:0;
+  padding:0;
   box-sizing: border-box;
 }
 
 html,body{
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
+  height:100%;
+  width:100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-main{
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: center;
-  white-space: nowrap;
+h1{
+  font-size: 75px;
+  margin: 50px;
 }
 
 button{
-  padding: 10px 20px;
+  padding:15px 25px;
   background-color: red;
-  border-radius: 10px;
-  position: relative;
-  z-index: 9;
+  color:black;
 }
 
 button:active{
   background-color: green;
+  color:white;
   scale: 0.90;
 }
