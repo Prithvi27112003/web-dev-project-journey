@@ -1,31 +1,78 @@
 *{
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 html,body{
-  height:100%;
-  width:100%;
-  display:flex;
-  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+main{
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
   align-items: center;
-  flex-direction: column;
+  justify-content: center;
 }
 
-h1{
-  font-size: 75px;
-  margin: 50px;
+.card{
+  height: 250px;
+  width: 500px;
+  background-color: whitesmoke;
+  border-radius: 25px;
+  padding:30px;
 }
 
-button{
-  padding:15px 25px;
-  background-color: red;
-  color:black;
+.card p {
+  font-size: 20px;
+  color: black;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
-button:active{
+.card p span{
+  color: blue;
+}
+
+.outer{
+  height: 20px;
+  width: 100%;
+  background-color: rgb(210, 218, 225);
+  border-radius: 50px;
+}
+
+.inner{
+  height: 100%;
+  width: 0%;
   background-color: green;
-  color:white;
+  border-radius: 50px;
+}
+
+.bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.bottom h1{
+  font-size: 50px;
+  color: black;
+}
+
+.bottom button{
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.bottom button:active{
   scale: 0.90;
 }

@@ -1,12 +1,25 @@
-
 let btn = document.querySelector('button');
-let h1 = document.querySelector('h1');
+let percentage = document.querySelector('h1');
+let track = document.querySelector('.inner');
+let grow = 0;
+
 
 btn.addEventListener('click',function(){
-  h1.innerHTML = 'CHANGING WAIT FOR A WHILE';
-  let name = prompt("Please enter your name");
+  btn.style.pointerEvents = 'none';
+  btn.style.opacity = '50%';
+
+  let speed = 50 + Math.floor(Math.random()*100);
+
+  let downloading = setInterval(function(){
+    grow++;
+    track.style.width = grow+'%';
+    percentage.innerHTML = grow+'%';
+
+  },speed);
 
   setTimeout(function(){
-    h1.innerHTML = `Hello, I am ${name}.`;
-  },3000);
-})
+    clearInterval(downloading);
+  },speed*100);
+
+
+});
