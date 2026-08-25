@@ -13,66 +13,43 @@ main{
   height: 100%;
   width: 100%;
   background-color: black;
-  color: white;
+  background-image: url(https://images.unsplash.com/photo-1786600837449-b7e28e6feec0?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  color: rgb(167, 173, 178);
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 .card{
-  height: 250px;
-  width: 500px;
-  background-color: whitesmoke;
-  border-radius: 25px;
-  padding:30px;
-}
-
-.card p {
-  font-size: 20px;
-  color: black;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-.card p span{
-  color: blue;
-}
-
-.outer{
-  height: 20px;
-  width: 100%;
-  background-color: rgb(210, 218, 225);
-  border-radius: 50px;
-}
-
-.inner{
-  height: 100%;
-  width: 0%;
-  background-color: green;
-  border-radius: 50px;
-}
-
-.bottom{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 30px;
-}
-
-.bottom h1{
-  font-size: 50px;
-  color: black;
-}
-
-.bottom button{
-  padding: 10px 20px;
-  background-color: green;
-  color: white;
+  height: 400px;
+  width: 300px;
+  background-color: white;
   border-radius: 10px;
-  cursor: pointer;
-  font-size: 20px;
+  padding: 25px;
+  color: black;
+  position: relative;
+  overflow: hidden;
 }
 
-.bottom button:active{
-  scale: 0.90;
+.card i{
+  position:absolute;
+  top: 50%;
+  left:50%;
+  font-size: 60px;
+  color: rgb(237, 75, 210);
+  transform: translate(-50%,-50%) scale(0) rotate(-60deg);
+  opacity: 0;
+  transition: all cubic-bezier(.54,.65,.31,1.3) 0.3s;
+}
+
+.card img{
+  height: 300px;
+  width: 250px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.card h2{
+  text-align: center;
 }

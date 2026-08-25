@@ -1,25 +1,21 @@
-let btn = document.querySelector('button');
-let percentage = document.querySelector('h1');
-let track = document.querySelector('.inner');
-let grow = 0;
+let picture = document.querySelector('img');
+let like = document.querySelector('i');
 
-
-btn.addEventListener('click',function(){
-  btn.style.pointerEvents = 'none';
-  btn.style.opacity = '50%';
-
-  let speed = 50 + Math.floor(Math.random()*100);
-
-  let downloading = setInterval(function(){
-    grow++;
-    track.style.width = grow+'%';
-    percentage.innerHTML = grow+'%';
-
-  },speed);
+picture.addEventListener('dblclick',function(){
+  
+  like.style.opacity = 1;
+  like.style.transform = 'translate(-50%,-50%) scale(1) rotate(0deg)'
 
   setTimeout(function(){
-    clearInterval(downloading);
-  },speed*100);
+    like.style.transform = 'translate(-50%,-500%) scale(1) rotate(60deg)';
+  },800);
 
+  setTimeout(function(){
+    like.style.opacity = 0;
+  },1000);
 
-});
+  setTimeout(function(){
+    like.style.transform = 'translate(-50%,50%) scale(0) rotate(0deg)';
+  },1200)
+  
+})
