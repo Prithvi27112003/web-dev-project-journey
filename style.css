@@ -10,41 +10,51 @@ html,body{
 }
 
 main{
+  background-color: rgb(183, 126, 237);
   min-height: 100vh;
   width: 100%;
-  background-color: rgb(35, 34, 34);
   display: flex;
-  align-items: flex-start;
-  gap: 15px;
-  flex-wrap: wrap;
-  padding: 20px;
-  cursor: pointer;
+  align-items: center;
+  justify-content: center;
 }
 
 .card{
   height: 300px;
   width: 250px;
-  background-color:whitesmoke;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  padding: 20px;
   text-align: center;
-  border-radius: 20px;
-  padding: 15px;
-  color: black;
+  cursor: pointer;
 }
 
 .card img{
-  border-radius: 50%;
-  border: 2px solid black;
+  height: 50%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
 }
 
 .card h2{
-  margin-bottom: 10px;
+  margin: 15px 0px;
+  font-weight: 700;
 }
 
 .card h4{
+  margin-bottom: 10px;
   color: darkblue;
-  margin-bottom: 5px;
 }
 
-.card:active{
-  border: 5px solid rgb(179, 173, 173);
+
+button{
+  padding: 15px;
+  background-color: blue;
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+button:active{
+  scale: 0.90;
 }
