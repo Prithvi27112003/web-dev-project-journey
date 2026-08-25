@@ -5,13 +5,19 @@ let friend = false;
 button.addEventListener('click',function(){
   if(friend === false){
     friend = true;
-    button.innerHTML = 'Unfollow';
-    title.innerHTML = 'Friend';
-    title.style.color = 'pink';
+    setTimeout(function(){
+      button.innerHTML = 'Unfollow';
+      title.innerHTML = 'Friend';
+      title.style.color = 'pink';
+      button.style.backgroundColor = 'red';
+    },300);
   }else{
     friend = false;
-    button.innerHTML = 'Follow';
-    title.innerHTML = 'Stranger';
-    title.style.color = 'red';
+    setTimeout(function(){
+      button.innerHTML = 'Follow';
+      title.innerHTML = 'Stranger';
+      title.style.color = 'red';
+      button.style.backgroundColor = 'green';
+    },300);
   }
 })
