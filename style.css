@@ -10,32 +10,30 @@ html,body{
 }
 
 main{
-  height: 100%;
+  min-height: 100vh;
   width: 100%;
-  background-color: rgb(139, 134, 134);
+  background-color: rgb(35, 34, 34);
   display: flex;
   align-items: flex-start;
-  gap: 10px;
-  padding: 20px;
+  gap: 15px;
   flex-wrap: wrap;
+  padding: 20px;
+  cursor: pointer;
 }
 
 .card{
   height: 300px;
   width: 250px;
-  background-color: whitesmoke;
+  background-color:whitesmoke;
   text-align: center;
-  padding: 20px;
   border-radius: 20px;
-  cursor: pointer;
+  padding: 15px;
+  color: black;
 }
 
 .card img{
-  height: 125px;
-  width: 125px;
-  object-fit: cover;
   border-radius: 50%;
-  margin-bottom: 10px;
+  border: 2px solid black;
 }
 
 .card h2{
@@ -44,8 +42,9 @@ main{
 
 .card h4{
   color: darkblue;
+  margin-bottom: 5px;
 }
 
-.card:active {
-  border: 5px solid brown;
+.card:active{
+  border: 5px solid rgb(179, 173, 173);
 }
