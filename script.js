@@ -1,14 +1,7 @@
-let message = document.querySelector('h1 span');
-let image = document.querySelector('img');
-let body = document.body;
+let main = document.querySelector('main');
+let cursor = document.getElementById('Cursor');
 
-image.addEventListener('mouseenter',function(){
-  message.innerHTML = 'Chuki sa dur rha tu';
-  body.style.backgroundColor = 'red';
-
+main.addEventListener('mousemove',function(det){
+  cursor.style.left = det.x + 'px';
+  cursor.style.top =  det.y + 'px';
 });
-
-image.addEventListener('mouseleave',function(){
-  message.innerHTML = 'Hmm good';
-  body.style.backgroundColor = 'green';
-})
