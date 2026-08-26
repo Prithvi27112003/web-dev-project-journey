@@ -1,23 +1,14 @@
-let title = document.querySelector('h4');
-let button = document.querySelector('button');
+let message = document.querySelector('h1 span');
+let image = document.querySelector('img');
+let body = document.body;
 
-let friend = false;
-button.addEventListener('click',function(){
-  if(friend === false){
-    friend = true;
-    setTimeout(function(){
-      button.innerHTML = 'Unfollow';
-      title.innerHTML = 'Friend';
-      title.style.color = 'pink';
-      button.style.backgroundColor = 'red';
-    },300);
-  }else{
-    friend = false;
-    setTimeout(function(){
-      button.innerHTML = 'Follow';
-      title.innerHTML = 'Stranger';
-      title.style.color = 'red';
-      button.style.backgroundColor = 'green';
-    },300);
-  }
+image.addEventListener('mouseenter',function(){
+  message.innerHTML = 'Chuki sa dur rha tu';
+  body.style.backgroundColor = 'red';
+
+});
+
+image.addEventListener('mouseleave',function(){
+  message.innerHTML = 'Hmm good';
+  body.style.backgroundColor = 'green';
 })
