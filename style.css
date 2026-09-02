@@ -7,17 +7,108 @@
 html,body{
   height: 100%;
   width: 100%;
-  cursor: none;
+  scrollbar-width: none;
 }
 
 main{
-  min-height: 100vh;
+  min-height: 100%;
   width: 100%;
-  background-color: black;
+  background-color:black;
+  padding: 20px;
+  
 }
 
-#Cursor{
-  height: 40px;
-  position: fixed;
-  transform: translate(-50%,-50%);
+section{
+  height: 100%;
+  width: 350px;
+
+  margin: auto;
+  background-color: black;
+  
+}
+
+.allReels{
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+.Reels{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.Reels video{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
+.Reels .bottom{
+  width: 100%;
+  padding: 30px 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.516));
+  bottom:0;
+  position: absolute;
+  color: white;
+}
+
+.bottom .user{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.bottom .user img{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.bottom .user button{
+  background-color: transparent;
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 15px;
+  border: 2px solid white;
+}
+
+.bottom>h3{
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.right{
+  position: absolute;
+  right: 20px;
+  bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+
+.right i{
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.right h6{
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.love{
+  color: red;
 }
