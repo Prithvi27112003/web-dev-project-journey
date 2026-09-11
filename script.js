@@ -1,7 +1,19 @@
+let p = document.querySelector("p");
+let text = p.innerText;
+let character = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+let iteration = 0;
 
-var box = document.querySelector('.box1');
-box.addEventListener("mousemove", (e) => {
-  console.log(e.clientX,e.clientY);
-  document.body.style.setProperty("--x",e.clientX+"px");
-  document.body.style.setProperty("--y",e.clientY+"px");
-})
+function random(){
+  const str = text.split("").map((char,index) => {
+    if(iteration > index){
+      return char;
+    }
+    return character.split("")[Math.floor(Math.random()*52)]
+  }).join("")
+
+  p.innerText = str;
+
+  iteration += 0.25;
+}
+
+setInterval(random,25);
